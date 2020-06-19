@@ -31,7 +31,7 @@ namespace FoodCourt.ViewModels.Base
 
         public bool IsNotBusy => !IsBusy;
 
-        //Lấy parameter truyền xuống ViewModel khi Navigation, và loại  Navgation
+        //Lấy parameter truyền xuống ViewModel khi Navigation, và loại  NavgationType
         public virtual Task OnNavigationAsync(NavigationParameters parameter, NavigationType navigationType)
         {
             return Task.CompletedTask;
