@@ -7,5 +7,9 @@ namespace FoodCourt.ViewModels.Tabs
 {
     public class ProductViewModel : ViewModelBase
     {
+        public ProductViewModel()
+        {
+            Title = "More View";
+        }
     }
 }

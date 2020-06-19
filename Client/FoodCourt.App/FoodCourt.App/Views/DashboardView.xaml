@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabs="clr-namespace:FoodCourt.Views.Tabs;assembly=FoodCourt.App"
              mc:Ignorable="d"
-             x:Class="FoodCourt.Views.DashboardView">
+             x:Class="FoodCourt.Views.DashboardView"
+             Title="{Binding Title}">
   <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
         <tabs:HomeView /> 

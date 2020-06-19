@@ -21,6 +21,9 @@ namespace FoodCourt.Services.Navigation
         {
             try
             {
+                if (viewModelType.FullName == null)
+                    return null;
+
                 var viewType = Type.GetType(viewModelType.FullName.Replace("ViewModel", "View"));
 
                 if (viewType == null)

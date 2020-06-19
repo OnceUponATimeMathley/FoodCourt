@@ -6,6 +6,10 @@ using FoodCourt.ViewModels.Base;
 namespace FoodCourt.ViewModels
 {
     public class RegisterViewModel : ViewModelBase
-    { 
+    {
+        public RegisterViewModel()
+        {
+            Title = "Register View";
+        }
     }
 }

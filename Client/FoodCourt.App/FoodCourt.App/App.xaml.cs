@@ -1,5 +1,7 @@
 ﻿using System;
 using Autofac.Core;
+using FoodCourt.Services.Navigation;
+using FoodCourt.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,6 +14,13 @@ namespace FoodCourt
             InitializeComponent();
 
             BuildDependencies();
+
+            InitNavigation();
+        }
+
+        private void InitNavigation()
+        {
+            ServiceLocator.Instance.Resolve<INavigationService>().NavigateToAsync<LoginViewModel>();
         }
 
         private void BuildDependencies()
