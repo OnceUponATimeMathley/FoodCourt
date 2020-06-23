@@ -5,11 +5,11 @@ using FoodCourt.ViewModels.Base;
 
 namespace FoodCourt.ViewModels.Tabs
 {
-    public class HomeViewModel : ViewModelBase
+    public class CategoryViewModel : ViewModelBase
     {
-        public HomeViewModel()
+        public CategoryViewModel()
         {
-            Title = "Home View";
+            Title = "Category";
         }
     }
 }

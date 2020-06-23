@@ -9,7 +9,7 @@ namespace FoodCourt.ViewModels
     {
         public DashboardViewModel()
         {
-            Title = "Dashboard View";
+            Title = "Food Court";
         }
     }
 }

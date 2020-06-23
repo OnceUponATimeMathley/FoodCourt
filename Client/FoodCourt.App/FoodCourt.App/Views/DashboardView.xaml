@@ -9,7 +9,7 @@
              Title="{Binding Title}">
   <!--Pages can be added as references or inline-->
     <TabbedPage.Children>
-        <tabs:HomeView /> 
-        <tabs:ProductView />
+        <tabs:StallsView /> 
+        <tabs:CategoryView />
     </TabbedPage.Children>
 </TabbedPage>

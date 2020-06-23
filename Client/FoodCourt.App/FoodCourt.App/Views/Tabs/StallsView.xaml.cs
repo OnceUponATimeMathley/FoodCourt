@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace FoodCourt.Views.Tabs
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProductView : ContentPage
+    public partial class StallsView : ContentPage
     {
-        public ProductView()
+        public StallsView()
         {
             InitializeComponent();
         }
