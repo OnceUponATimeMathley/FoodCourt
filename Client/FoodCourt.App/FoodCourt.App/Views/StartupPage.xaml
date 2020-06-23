@@ -9,8 +9,10 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarItemColor="Black"
-            android:TabbedPage.BarSelectedItemColor="#08b9ff">
+            android:TabbedPage.BarSelectedItemColor="#08b9ff"
+            BarBackgroundColor="{OnPlatform Android=White}">
     <!--Pages can be added as references or inline-->
+
     <TabbedPage.Children>
         <NavigationPage Title="Home" Icon="home_icon.png">
             <x:Arguments>
@@ -18,15 +20,15 @@
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Search">
+        <NavigationPage Title="Search" Icon="search_icon.png">
             <x:Arguments>
-                <views:HomeView/>
+                <views:MoreView/>
             </x:Arguments>
         </NavigationPage>
 
-        <NavigationPage Title="Profile">
+        <NavigationPage Title="Profile" Icon="user_icon.png">
             <x:Arguments>
-                <views:HomeView/>
+                <views:ProductView/>
             </x:Arguments>
         </NavigationPage>
     </TabbedPage.Children>

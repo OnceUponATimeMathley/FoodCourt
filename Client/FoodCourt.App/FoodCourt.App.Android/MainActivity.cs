@@ -22,6 +22,12 @@ namespace FoodCourt.Droid
 
             InitControls(savedInstanceState);
 
+            if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop)
+            {
+                Window.SetStatusBarColor(Android.Graphics.Color.White);
+                Window.SetNavigationBarColor(Android.Graphics.Color.White);
+            }
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

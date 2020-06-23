@@ -6,6 +6,11 @@
              mc:Ignorable="d"
              x:Class="FoodCourt.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
