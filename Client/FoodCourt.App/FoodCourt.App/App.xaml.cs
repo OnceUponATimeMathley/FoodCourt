@@ -12,6 +12,8 @@ namespace FoodCourt
             InitializeComponent();
 
             BuildDependencies();
+
+            MainPage = new StartupPage();
         }
 
         private void BuildDependencies()

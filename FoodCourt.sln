@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodCourt.Identity", "Serve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodCourt.Resource", "Server\FoodCourt.Resource\FoodCourt.Resource.csproj", "{428F1C16-7874-4FD7-895E-85A882C51F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodCourt.Server.Shared", "Server\FoodCourt.Server.Shared\FoodCourt.Server.Shared.csproj", "{FE03DAA7-6B75-404B-8E01-03CA9A38699C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodCourt.Server.Shared", "Server\FoodCourt.Server.Shared\FoodCourt.Server.Shared.csproj", "{FE03DAA7-6B75-404B-8E01-03CA9A38699C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
