@@ -16,5 +16,12 @@ namespace FoodCourt.Views
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            FirstnameEntry.Focus();
+        }
     }
 }
