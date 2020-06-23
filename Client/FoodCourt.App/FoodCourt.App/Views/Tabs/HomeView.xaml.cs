@@ -13,18 +13,30 @@ namespace FoodCourt.Views.Tabs
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomeView : ContentPage
     {
-        public List<Stall> AllStalls { get; set; }
-
+        public Stalls stalls;
         public HomeView()
         {
             InitializeComponent();
+            stalls = new Stalls
+            {
+                ListStalls = Stalls.Get()
+            };
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            AllStalls = new List<Stall>(Stalls.Get());
-            collectionViewListHorizontal.ItemsSource = AllStalls;
+            collectionViewListHorizontal.ItemsSource = stalls.ListStalls.ToList();
+        }
+
+        async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            int number;
+            string id = ((Frame)sender).ClassId;
+            if (Int32.TryParse(id, out number))
+            {
+                await Navigation.PushAsync(new StallPage(number, stalls));
+            }
         }
     }
 }

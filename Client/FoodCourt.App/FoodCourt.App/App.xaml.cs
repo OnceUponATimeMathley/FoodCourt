@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Autofac.Core;
+using FoodCourt.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
