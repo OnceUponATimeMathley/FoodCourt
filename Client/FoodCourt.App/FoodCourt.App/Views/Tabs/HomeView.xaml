@@ -4,12 +4,50 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="FoodCourt.Views.Tabs.HomeView">
+             x:Class="FoodCourt.Views.Tabs.HomeView"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Home!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="20,20,20,20" Orientation="Vertical">
+            <Label Text="Food Court" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+            <Frame Padding="0" Margin="0,10,0,15" BackgroundColor="#EEEEEE" HasShadow="False" BorderColor="Transparent" CornerRadius="15" HeightRequest="45">
+                <SearchBar BackgroundColor="Transparent" FontSize="Small"/>
+            </Frame>
+            <Label Margin="0,0,10,0" Text="Stalls" FontSize="Medium" FontAttributes="Bold" TextColor="Black"></Label>
+
+            <CollectionView x:Name="collectionViewListHorizontal" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0, 10, 0, 10" Padding="0" BackgroundColor="White" CornerRadius="10" HasShadow="False">
+                            <Grid Padding="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Frame Grid.RowSpan="2" CornerRadius="10" Padding="0" Margin="0,0,10,0">
+                                    <Image 
+                       Source="{Binding PhotoUrl}"
+                       Aspect="AspectFill"
+                       HeightRequest="80"
+                       WidthRequest="80"/>
+                                </Frame>
+                                <Label Grid.Column="1"
+                       Text="{Binding Name}"
+                       FontAttributes="Bold" Margin="0,10,0,0" TextColor="Black"/>
+                                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Description}"
+                       FontAttributes="Italic"
+                       VerticalOptions="End" Margin="0,0,0,10" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
