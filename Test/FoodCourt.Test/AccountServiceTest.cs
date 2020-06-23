@@ -22,5 +22,15 @@ namespace FoodCourt.Test
             Assert.True(result.Successful);
             
         }
+
+        [Fact]
+        public async void Login()
+        {
+            var accountService = new AccountService(new HttpService());
+
+            var result = await accountService.LoginAsync("longromsay1@gmail.com", "123456");
+
+            Assert.True(result);
+        }
     }
 }

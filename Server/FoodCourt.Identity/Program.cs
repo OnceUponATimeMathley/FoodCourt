@@ -21,9 +21,9 @@ namespace FoodCourt.Identity
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder
-#if DEBUG
-                        .UseUrls("http://*:50967")
-#endif
+//#if DEBUG
+//                        .UseUrls("http://*:50967")
+//#endif
                         .UseStartup<Startup>();
                 });
     }

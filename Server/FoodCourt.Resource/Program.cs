@@ -20,9 +20,9 @@ namespace FoodCourt.Resource
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-#if DEBUG
-                    webBuilder.UseUrls("http://*:50994");
-#endif
+//#if DEBUG
+//                    webBuilder.UseUrls("http://*:50994");
+//#endif
                     webBuilder.UseStartup<Startup>();
                 });
     }

@@ -18,6 +18,7 @@
     },
     "FoodCourt.Identity": {
       "commandName": "Project",
+      "commandLineArgs": "--urls http://*:50967",
       "launchUrl": "weatherforecast",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
