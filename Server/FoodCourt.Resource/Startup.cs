@@ -34,6 +34,8 @@ namespace FoodCourt.Resource
                     options.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
                 });
 
+
+            services.AddAuthorization();
             //IdentityServerAuthenticationDefaults.AuthenticationScheme : "Bearer"
             services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication(options =>
